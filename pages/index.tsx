@@ -1,78 +1,45 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// web/pages/index.tsx
+import SectionWrapper from '../components/layout/SectionWrapper';
+import Button from '../components/ui/Button';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black`}
-    >
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the index.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="bg-[#050509] min-h-screen">
+      {/* ヒーロー */}
+      <SectionWrapper className="py-16 sm:py-32 bg-gradient-to-br from-[#3B0764] via-[#161037] to-[#050509] text-center text-white">
+        <h1 className="text-3xl sm:text-5xl font-black tracking-tight mb-6 bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] bg-clip-text text-transparent animate-fadein">ボイトレ歌い方動画アカデミー</h1>
+        <div className="text-lg sm:text-2xl font-medium mb-2 text-white/95">歌・音楽好きのためのサブスク動画サービス</div>
+        <div className="mb-8 text-base text-slate-200">本格講師のレッスン動画が月額見放題。Let’s enjoy your music life!</div>
+        <div className="flex justify-center gap-6 mb-8 flex-wrap">
+          <Link href="/register"><Button variant="primary" size="md" className="shadow-lg bg-gradient-to-r from-[#7C3AED] to-[#3B82F6]">無料会員登録</Button></Link>
+          <Link href="/videos"><Button variant="outline" size="md">動画一覧を見る</Button></Link>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs/pages/getting-started?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </SectionWrapper>
+      {/* 料金 */}
+      <SectionWrapper className="pt-12 pb-20 bg-gradient-to-br from-slate-900/90 via-indigo-950/80 to-[#1B1834]/90">
+        <div className="max-w-2xl mx-auto text-center">
+          <div className="inline-block bg-gradient-to-tr from-indigo-900/80 to-blue-900/60 p-8 rounded-3xl shadow-2xl border border-indigo-800/60">
+            <div className="text-lg tracking-wide mb-1 text-white/90">月額</div>
+            <div className="text-4xl sm:text-5xl font-bold mb-2 text-[#9F7AEA] drop-shadow">¥980<span className="text-base text-indigo-200 ml-2">(税込)</span></div>
+            <div className="text-white/80 mb-1">全ての動画が見放題！</div>
+            <Link href="/subscribe"><Button variant="primary" className="mt-4 w-full bg-gradient-to-r from-[#7C3AED] to-[#3B82F6]">有料会員になる</Button></Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </SectionWrapper>
+      {/* サンプル動画 */}
+      <SectionWrapper className="bg-black/95 pt-12 pb-20">
+        <div className="text-center mb-10">
+          <div className="inline-block bg-gradient-to-r from-[#3B82F6]/70 to-[#7C3AED]/60 px-4 py-2 rounded-l-full rounded-r-full text-base text-white font-bold mb-2">Sample Movie</div>
+          <div className="text-2xl text-white font-bold mb-6">まずはサンプル動画で体験！</div>
+        </div>
+        <div className="flex justify-center">
+          <div className="aspect-video w-full max-w-2xl rounded-3xl overflow-hidden shadow-xl border border-indigo-800/70">
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/aKGVvR_SKxI" title="YouTube sample" allowFullScreen></iframe>
+          </div>
+        </div>
+        <div className="mt-7 text-center text-white/80 text-lg">最新の課題曲、テクニックを毎月続々追加中！あなたも一緒にボイトレしよう。</div>
+      </SectionWrapper>
+    </main>
   );
 }
