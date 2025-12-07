@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import clsx from 'clsx';
-import type { Video, Instructor, Category } from '../../pages/domainMockData';
+import type { Video, Instructor, Category } from '../../mock/domainMockData';
 import { useFavoriteVideos } from '../useFavoriteVideos';
 
 type Props = {

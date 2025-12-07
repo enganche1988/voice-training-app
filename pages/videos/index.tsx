@@ -1,7 +1,7 @@
 // web/pages/videos/index.tsx
 
 import { useState } from 'react';
-import { videos, instructors, categories } from '../domainMockData';
+import { videos, instructors, categories } from '../../mock/domainMockData';
 import VideoCard from '../../components/videos/VideoCard';
 
 export default function VideosPage() {

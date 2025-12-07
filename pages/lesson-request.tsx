@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { instructors, videos } from './domainMockData';
+import { instructors, videos } from '../mock/domainMockData';
 import React, { useState } from 'react';
 export default function LessonRequestPage() {
   const { query } = useRouter();

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { users } from './domainMockData';
+import { users } from '../mock/domainMockData';
 export default function AdminPage() {
   // MVPなので、メール admin@example.com / PW admin で認証(先頭ADMINユーザー想定)。
   const [mail,setMail] = useState('');

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { Instructor } from '../../pages/domainMockData';
+import type { Instructor } from '../../mock/domainMockData';
 
 type Props = {
   instructor: Instructor;

@@ -1,4 +1,4 @@
-import { instructors } from "../domainMockData";
+import { instructors } from "../../mock/domainMockData";
 import InstructorCard from '../../components/instructors/InstructorCard';
 
 export default function InstructorList() {

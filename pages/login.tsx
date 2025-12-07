@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { users } from "./domainMockData";
+import { users } from "../mock/domainMockData";
 
 export default function LoginPage() {
   const [mail, setMail] = useState("");

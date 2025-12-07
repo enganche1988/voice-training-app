@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import { videos, instructors, categories } from '../domainMockData';
+import { videos, instructors, categories } from '../../mock/domainMockData';
 import InstructorCard from '../../components/instructors/InstructorCard';
 import { useFavoriteVideos } from '../../components/useFavoriteVideos';
 import Link from 'next/link';

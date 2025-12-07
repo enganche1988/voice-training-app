@@ -1,5 +1,5 @@
 import { useFavoriteVideos } from '../components/useFavoriteVideos';
-import { videos, instructors, categories } from './domainMockData';
+import { videos, instructors, categories } from '../mock/domainMockData';
 import VideoCard from '../components/videos/VideoCard';
 import Link from 'next/link';
 

@@ -94,3 +94,4 @@ export const videos: Video[] = [
 export const lessonRequests: LessonRequest[] = [
   { id: 'lr1', userId: 'u1', instructorId: 'i1', videoId: 'v1', preferredDatetimeText: '6/15(土)18:00以降', mode: 'ONLINE', budgetText: '3000円以内', message: '高音の出し方強化したい', status: 'NEW', createdAt: '2024-06-05' }
 ];
+
